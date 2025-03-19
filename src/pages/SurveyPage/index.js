@@ -1,9 +1,13 @@
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 import ProgressIndicator from '../../components/ProgressIndicator';
 import QuestionBox from '../../components/QuestionBox';
 
 function SurveyPage() {
+  const params = useParams();
+  console.log(params);
+
   const questions = [
     {
       title: '질문1 입니다.',
@@ -28,7 +32,7 @@ function SurveyPage() {
     },
   ];
 
-  const step = 0;
+  const step = parseInt(params.step);
 
   const [answers, setAnswers] = useState([]);
 
