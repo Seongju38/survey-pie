@@ -1,10 +1,37 @@
+import { useNavigate } from 'react-router-dom';
+
 function ActionButtons({ questionsLength, step }) {
   const isLast = questionsLength - 1 === step;
+  const navigate = useNavigate();
 
   return (
     <div>
-      {step === 0 || <button>이전</button>}
-      {isLast ? <button>제출</button> : <button>다음</button>}
+      {step === 0 || (
+        <button
+          onClick={() => {
+            navigate(`/survey/id/${step - 1}`);
+          }}
+        >
+          이전
+        </button>
+      )}
+      {isLast ? (
+        <button
+          onClick={() => {
+            navigate('/done');
+          }}
+        >
+          제출
+        </button>
+      ) : (
+        <button
+          onClick={() => {
+            navigate(`/survey/id/${step + 1}`);
+          }}
+        >
+          다음
+        </button>
+      )}
     </div>
   );
 }
