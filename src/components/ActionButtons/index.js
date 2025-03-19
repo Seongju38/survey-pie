@@ -1,9 +1,10 @@
-function ActionButtons() {
+function ActionButtons({ questionsLength, step }) {
+  const isLast = questionsLength - 1 === step;
+
   return (
     <div>
-      <button>이전</button>
-      <button>다음</button>
-      <button>제출</button>
+      {step === 0 || <button>이전</button>}
+      {isLast ? <button>제출</button> : <button>다음</button>}
     </div>
   );
 }

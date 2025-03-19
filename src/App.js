@@ -31,7 +31,11 @@ function App() {
   return (
     <div className="App">
       <ProgressIndicator />
-      <QuestionBox question={questions[step]} />
+      <QuestionBox
+        question={questions[step]}
+        questionsLength={questions.length}
+        step={step}
+      />
     </div>
   );
 }
