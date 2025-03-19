@@ -54,10 +54,24 @@ function App() {
       <div>Hello World</div>
       <Routes>
         <Route path="/done" element={<CompletionPage />} />
-        <Route path="/survey" element={<SurveyPage />} />
+        <Route path="/survey/:surveyId/:step" element={<SurveyPage />} />
       </Routes>
     </div>
   );
 }
+
+/*
+
+"/survey" 에 추가로 필요한 것 : 질문 데이터를 받아오기 위한 설문ID, 설문조사 화면 전환을 위한 값
+
+<전통적인 방식의 웹서비스 - queryString 이용>
+http://www.surveypie.com/survey?id=adc123
+
+<path에 포함되어서 데이터를 받아오는 방법>
+http://www.surveypie.com/survey/adc123
+문제 ) abc123 이 말 그대로 path인건지, 데이터를 담아둔 영역인건지 판단하기 쉽지 않음
+  -> path="/survey/:abc123" 콜론으로 구별 
+
+*/
 
 export default App;
