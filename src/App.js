@@ -3,8 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 
 import ProgressIndicator from './components/ProgressIndicator';
 import QuestionBox from './components/QuestionBox';
-import PageA from './pages/PageA';
-import PageB from './pages/PageB';
+import CompletionPage from './pages/CompletionPage';
+import SurveyPage from './pages/SurveyPage';
 
 function App() {
   const questions = [
@@ -53,8 +53,8 @@ function App() {
       /> */}
       <div>Hello World</div>
       <Routes>
-        <Route path="/" element={<PageA />} />
-        <Route path="/2" element={<PageB />} />
+        <Route path="/done" element={<CompletionPage />} />
+        <Route path="/survey" element={<SurveyPage />} />
       </Routes>
     </div>
   );
