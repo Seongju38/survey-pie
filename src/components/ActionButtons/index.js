@@ -9,7 +9,7 @@ function ActionButtons({ questionsLength, step }) {
       {step === 0 || (
         <button
           onClick={() => {
-            navigate(`/survey/id/${step - 1}`);
+            navigate(`${step - 1}`);
           }}
         >
           이전
@@ -26,7 +26,7 @@ function ActionButtons({ questionsLength, step }) {
       ) : (
         <button
           onClick={() => {
-            navigate(`/survey/id/${step + 1}`);
+            navigate(`${step + 1}`);
           }}
         >
           다음

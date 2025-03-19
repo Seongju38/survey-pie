@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/done" element={<CompletionPage />} />
-        <Route path="/survey/:surveyId/:step" element={<SurveyPage />} />
+        <Route path="/survey/:surveyId" element={<SurveyPage />}>
+          <Route path=":step" element={<SurveyPage />} />
+        </Route>
       </Routes>
     </div>
   );
