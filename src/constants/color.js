@@ -19,6 +19,25 @@ export const PRIMARY = {
   },
 };
 
-export const SECONDARY = {};
+export const SECONDARY = {
+  BUTTON: {
+    DEFAULT: {
+      COLOR: '#3A3A3A',
+      BACKGROUND: '#DEDEDE',
+    },
+    HOVER: {
+      COLOR: '#3A3A3A',
+      BACKGROUND: '#F3F3F3',
+    },
+    PRESSED: {
+      COLOR: '#3A3A3A',
+      BACKGROUND: '#B8B7B9',
+    },
+    DISABLED: {
+      COLOR: '#D0CDCD',
+      BACKGROUND: '#EDEDED',
+    },
+  },
+};
 
 export const TERTIARY = {};
