@@ -10,6 +10,7 @@ function ActionButtons({ questionsLength, step }) {
     <div>
       {step === 0 || (
         <Button
+          type="SECONDARY"
           onClick={() => {
             navigate(`${step - 1}`);
           }}
@@ -19,6 +20,7 @@ function ActionButtons({ questionsLength, step }) {
       )}
       {isLast ? (
         <Button
+          type="PRIMARY"
           onClick={() => {
             navigate('/done');
           }}
@@ -27,6 +29,7 @@ function ActionButtons({ questionsLength, step }) {
         </Button>
       ) : (
         <Button
+          type="PRIMARY"
           onClick={() => {
             navigate(`${step + 1}`);
           }}
