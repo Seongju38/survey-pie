@@ -6,9 +6,6 @@ function CompletionPage() {
   return <CompletionPageWrapper>CompletionPage</CompletionPageWrapper>;
 }
 
-const CompletionPageWrapper = styled.div`
-  background: aqua;
-  padding: ${a === 123 ? '4em' : '1em'};
-`;
+const CompletionPageWrapper = styled.div``;
 
 export default CompletionPage;
