@@ -1,3 +1,4 @@
+import TextAreaInput from '../TextAreaInput';
 import TextInput from '../TextInput';
 
 function Body({ type, answer, setAnswer }) {
@@ -8,6 +9,7 @@ function Body({ type, answer, setAnswer }) {
   } else if (type === 'text') {
     InputComponent = TextInput;
   } else if (type === 'textarea') {
+    InputComponent = TextAreaInput;
   }
   return (
     <>
