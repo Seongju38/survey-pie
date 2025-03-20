@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
 import ProgressIndicator from '../../components/ProgressIndicator';
 import QuestionBox from '../../components/QuestionBox';
@@ -43,7 +44,7 @@ function SurveyPage() {
   const [answers, setAnswers] = useState([]);
 
   return (
-    <div>
+    <SurveyPageWrapper>
       <ProgressIndicator />
       <QuestionBox
         question={questions[step]}
@@ -58,8 +59,13 @@ function SurveyPage() {
           });
         }}
       />
-    </div>
+    </SurveyPageWrapper>
   );
 }
+
+const SurveyPageWrapper = styled.div`
+  width: 100%;
+  min-height: 100%;
+`;
 
 export default SurveyPage;

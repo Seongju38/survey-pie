@@ -38,6 +38,8 @@ const Box = styled.div`
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.07);
   border-radius: 16px;
   padding: 60px;
+  display: flex;
+  box-sizing: border-box;
 `;
 
 export default App;

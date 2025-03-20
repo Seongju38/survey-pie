@@ -22,7 +22,8 @@ function Body({ type, answer, setAnswer, options }) {
 }
 
 const BodyWrapper = styled.div`
-  margin-left: 38px;
+  margin: 0 38px;
+  flex: 1;
 `;
 
 export default Body;
