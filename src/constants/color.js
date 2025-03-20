@@ -40,4 +40,27 @@ export const SECONDARY = {
   },
 };
 
-export const TERTIARY = {};
+export const TERTIARY = {
+  BUTTON: {
+    DEFAULT: {
+      COLOR: '#6542F1',
+      BACKGROUND: '#FFFFFF',
+      BORDER: '#6542F1',
+    },
+    HOVER: {
+      COLOR: '#AF9BFF',
+      BACKGROUND: '#FFFFFF',
+      BORDER: '#AF9BFF',
+    },
+    PRESSED: {
+      COLOR: '#2F0EB5',
+      BACKGROUND: '#F0EDFC',
+      BORDER: '#2F0EB5',
+    },
+    DISABLED: {
+      COLOR: '#D0CDCD',
+      BACKGROUND: '#F6F6F6',
+      BORDER: '#EDEDED',
+    },
+  },
+};

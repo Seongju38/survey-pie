@@ -10,7 +10,7 @@ function ActionButtons({ questionsLength, step }) {
     <div>
       {step === 0 || (
         <Button
-          type="SECONDARY"
+          type="TERTIARY"
           onClick={() => {
             navigate(`${step - 1}`);
           }}
