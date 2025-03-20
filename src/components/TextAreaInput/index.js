@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-function TextAreaInput({ answer, setAnswer }) {
+function TextAreaInput({ answer, setAnswer, options }) {
   return (
     <TextArea
       type="text"
@@ -8,6 +8,7 @@ function TextAreaInput({ answer, setAnswer }) {
       onChange={(e) => {
         setAnswer(e.target.value);
       }}
+      placeholder={options.placeholder}
     />
   );
 }

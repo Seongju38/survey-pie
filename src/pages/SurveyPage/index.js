@@ -21,14 +21,18 @@ function SurveyPage() {
       desc: '설명2 입니다.',
       type: 'text',
       required: false,
-      options: {},
+      options: {
+        placeholder: 'placeholder 입니다.',
+      },
     },
     {
       title: '질문3 입니다.',
       desc: '설명3 입니다.',
       type: 'textarea',
       required: false,
-      options: {},
+      options: {
+        placeholder: 'placeholder 입니다.',
+      },
     },
   ];
 
