@@ -17,7 +17,6 @@ function QuestionBox() {
   const [answers, setAnswers] = useRecoilState(answersState);
 
   const question = questions[step];
-  const questionsLength = questions.length;
   const answer = answers[step];
   const setAnswer = (newAnswer) => {
     setAnswers((answers) => {
@@ -37,7 +36,7 @@ function QuestionBox() {
         setAnswer={setAnswer}
         options={question.options}
       />
-      <ActionButtons questionsLength={questionsLength} step={step} />
+      <ActionButtons />
     </QuestionBoxWrapper>
   );
 }
