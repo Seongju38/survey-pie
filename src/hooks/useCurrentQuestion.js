@@ -4,18 +4,20 @@ import { useRecoilState } from 'recoil';
 
 import surveyState from '../stores/survey/atom';
 import useStep from './useStep';
+import useSurveyId from './useSurveyId';
 
 function useCurrentQuestion() {
   const step = useStep();
+  const surveyId = useSurveyId();
   const [surveyData, setSurvey] = useRecoilState(surveyState);
   const questions = surveyData?.questions || [];
 
   useEffect(() => {
-    axios.get('http://localhost:3001/surveys/1').then((res) => {
+    axios.get(`http://localhost:3001/surveys/${surveyId}`).then((res) => {
       console.log(res);
       setSurvey(res.data);
     });
-  }, [setSurvey]);
+  }, [setSurvey, surveyId]);
 
   return questions[step];
 }
