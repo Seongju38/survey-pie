@@ -7,7 +7,8 @@ import useStep from './useStep';
 
 function useCurrentQuestion() {
   const step = useStep();
-  const questions = useRecoilValue(surveyState).questions;
+  const surveyData = useRecoilValue(surveyState);
+  const questions = surveyData?.questions || [];
 
   useEffect(() => {
     axios.get('http://localhost:3001/surveys/1').then((res) => {

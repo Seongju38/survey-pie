@@ -8,8 +8,12 @@ import Desc from '../Desc';
 import Title from '../Title';
 
 function QuestionBox() {
-  const question = useCurrentQuestion();
   const [answer, setAnswer] = useCurrentAnswer();
+  const question = useCurrentQuestion(); // undefined
+
+  if (!question) {
+    return null;
+  }
 
   return (
     <QuestionBoxWrapper>
