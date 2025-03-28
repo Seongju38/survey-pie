@@ -11,9 +11,9 @@ function QuestionBox() {
   const [answer, setAnswer] = useCurrentAnswer();
   const question = useCurrentQuestion(); // undefined
 
-  if (!question) {
-    return null;
-  }
+  // if (!question) {
+  //   return null;
+  // }
 
   return (
     <QuestionBoxWrapper>
