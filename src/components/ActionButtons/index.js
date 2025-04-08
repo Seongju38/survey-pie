@@ -34,8 +34,13 @@ function ActionButtons() {
         <Button
           type="PRIMARY"
           onClick={() => {
-            postAnswers(surveyId, answers);
-            navigate(`/done/${surveyId}`);
+            postAnswers(surveyId, answers)
+              .then(() => {
+                navigate(`/done/${surveyId}`);
+              })
+              .catch((err) => {
+                alert('에러가 발생했습니다. 다시 시도해주세요.');
+              });
           }}
         >
           제출
