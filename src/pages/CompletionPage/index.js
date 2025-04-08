@@ -1,16 +1,25 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import congrats from '../../assets/congrats.png';
 import reload from '../../assets/reload.png';
 import Button from '../../components/Button';
+import useSurveyId from '../../hooks/useSurveyId';
 
 function CompletionPage() {
-  console.log(congrats);
+  const surveyId = useSurveyId();
+  const navigate = useNavigate();
+
   return (
     <CompletionPageWrapper>
       <img src={congrats} alt="" width="209" height="204" />
       <MidText>설문을 완료했습니다.</MidText>
-      <ReloadButton type="TERTIARY" onClick={() => {}}>
+      <ReloadButton
+        type="TERTIARY"
+        onClick={() => {
+          navigate(`/survey/${surveyId}/0`);
+        }}
+      >
         <img src={reload} alt="" width="24" height="24" />
         새로운 응답 제출하기
       </ReloadButton>
