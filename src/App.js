@@ -28,7 +28,7 @@ const AppWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e5e5e5;
+  background-color: #f5f5f5;
 `;
 
 const Box = styled.div`

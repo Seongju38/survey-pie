@@ -5,9 +5,9 @@ import Bar from '../Bar';
 function ProgressIndicator() {
   return (
     <ProgressIndicatorWrapper>
-      <Bar />
-      <Bar />
-      <Bar />
+      <Bar status="done" />
+      <Bar status="in-progress" />
+      <Bar status="pending" />
       <PageCount>
         <span>2</span>/3
       </PageCount>
