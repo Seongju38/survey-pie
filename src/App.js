@@ -40,6 +40,7 @@ const Box = styled.div`
   padding: 60px;
   display: flex;
   box-sizing: border-box;
+  position: relative;
 `;
 
 export default App;
