@@ -9,6 +9,7 @@ function TextInput({ answer = '', setAnswer, options }) {
         setAnswer(e.target.value);
       }}
       placeholder={options.placeholder}
+      {...(options?.max && { maxLength: options?.max })} // 컴포넌트에 props를 조건적으로 전달해줄 때 유용
     />
   );
 }
