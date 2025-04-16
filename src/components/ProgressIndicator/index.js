@@ -8,7 +8,9 @@ function ProgressIndicator() {
       <Bar />
       <Bar />
       <Bar />
-      <PageCount>2/3</PageCount>
+      <PageCount>
+        <span>2</span>/3
+      </PageCount>
     </ProgressIndicatorWrapper>
   );
 }
@@ -26,6 +28,14 @@ const ProgressIndicatorWrapper = styled.div`
 
 const PageCount = styled.div`
   margin-left: 8px;
+  color: #636262;
+  font-size: 16px;
+  line-height: 19px;
+
+  span {
+    font-weight: bold;
+    color: #121111;
+  }
 `;
 
 export default ProgressIndicator;
