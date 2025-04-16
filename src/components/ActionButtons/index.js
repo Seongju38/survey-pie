@@ -21,6 +21,7 @@ function ActionButtons() {
 
   const isLast = questionsLength - 1 === step;
   const navigate = useNavigate();
+  const isBlockToNext = isRequired ? !answers[step]?.length : false;
 
   return (
     <ActionButtonsWrapper>
@@ -48,7 +49,7 @@ function ActionButtons() {
                 setIsPosting(false);
               });
           }}
-          disabled={isPosting}
+          disabled={isPosting || isBlockToNext}
         >
           {isPosting ? '제출 중입니다...' : '제출'}
         </Button>
@@ -58,7 +59,7 @@ function ActionButtons() {
           onClick={() => {
             navigate(`${step + 1}`);
           }}
-          disabled={isRequired ? !answers[step]?.length : false}
+          disabled={isBlockToNext}
         >
           다음
         </Button>
